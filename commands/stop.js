@@ -15,7 +15,7 @@ module.exports = {
     const serverQueue = message.client.queue.get(message.guild.id);
     if (!serverQueue)return sendError("There is nothing playing that I could stop for you.", message.channel);
     serverQueue.songs = [];
-    serverQueue.connection.dispatcher.end("Stop the music");
+    serverQueue.connection.dispatcher.end("Stopped the music");
     message.react("✅")
   },
 };
